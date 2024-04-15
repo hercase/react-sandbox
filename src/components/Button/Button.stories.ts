@@ -11,7 +11,7 @@ const meta = {
     variant: {
       control: {
         type: "select",
-        options: ["primary", "secondary"],
+        options: ["primary", "secondary", "solid"],
       },
     },
   },
