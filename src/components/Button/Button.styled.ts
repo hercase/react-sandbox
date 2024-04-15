@@ -2,7 +2,6 @@ import { css, styled } from "styled-components";
 import { ButtonProps } from ".";
 
 export const StyledButton = styled.button<Pick<ButtonProps, "variant">>`
-  $root: &;
   position: relative;
   width: 10.4375rem;
   height: 3.9375rem;
