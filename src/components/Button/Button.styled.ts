@@ -35,18 +35,21 @@ export const StyledButton = styled.button<Pick<ButtonProps, "variant">>`
     }
   }
 
-  ${({ variant }) =>
-    variant === "primary" &&
-    css`
+  ${({ variant }) => {
+    if (variant === "secondary")
+      return css`
+        background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+      `;
+
+    if (variant === "solid")
+      return css`
+        background: #13183f;
+      `;
+
+    return css`
       background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
-    `}
-
-  ${({ variant }) =>
-    variant === "secondary" &&
-    css`
-      background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
-    `}
-
+    `;
+  }}
 
   @media (max-width: 768px) {
     width: 8.75rem;
